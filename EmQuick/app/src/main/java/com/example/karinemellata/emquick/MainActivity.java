@@ -17,10 +17,12 @@ package com.example.karinemellata.emquick;
  */
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View.OnClickListener;
+import android.view.View;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -28,12 +30,63 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
+    private static Button button_ineed; 
+    private static Button button_someone;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.neepHelp).setOnClickListener(new HandleClick());
+        OnClickButtonINeed();
+        OnClickButtonSomeone();
+
     }
 
+    public void OnClickButtonINeed(){
+        button_ineed = (Button)findViewById(R.id.needHelp); //the button button_sub is the needHelp button
+        button_ineed.setOnClickListener( //what happens when you click on this button !
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                   // double latitude = 0.0;
+                    //double longitude = 0.0;
+
+                    Intent intent_ineed = new Intent("com.example.karinemellata.emquick.SecondActivity");
+                    startActivity(intent_ineed);
+
+                    //TextView t1 = (TextView)findViewById(R.id.coordinate);
+                    //t1.setText(Double.toString(latitude));
+
+
+                }
+            }
+
+
+            );
+
+    }
+
+     public void OnClickButtonSomeone(){
+        button_someone = (Button)findViewById(R.id.someone_need);
+        button_someone.setOnClickListener(
+            new View.OnClickListener(){
+                @Override
+                public void onClick(View view){
+                    Intent intent_someone = new Intent("com.example.karinemellata.emquick.ScanId");
+                    startActivity(intent_someone);
+
+                }
+            }
+        
+        );
+
+
+
+    }
+
+    
+
+/*
     protected class HandleClick implements OnClickListener {
         public void onClick(View arg0) {
             Button btn = (Button) arg0;  //cast view to a button
@@ -43,4 +96,13 @@ public class MainActivity extends Activity {
             //tv.setText("You pressed " + btn.getText());
         }
     }
+
+    */
+
+
+    public void onButtonClick(View v){
+
+
+    }
+
 }

@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
-        android:id="@+id/neepHelp"
+        android:id="@+id/needHelp"
         android:elevation="0dp"
         android:scaleX="1.5"
         android:scaleY="1.5"
@@ -33,30 +33,6 @@
         tools:textColor="?android:attr/textColorHint"
         android:background="@android:color/holo_blue_dark"
         android:textAppearance="@style/TextAppearance.AppCompat.Notification.Media"
-        android:height="70dp"
-        android:width="120dp"
-        android:textStyle="normal|bold" />
-
-    <Button
-        android:text="Someone needs\nhelp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
-        android:layout_marginRight="22dp"
-        android:layout_marginEnd="22dp"
-        android:id="@+id/button2"
-        android:elevation="0dp"
-        android:layout_alignBottom="@+id/neepHelp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="19sp"
-        android:typeface="monospace"
-        android:textColorLink="@android:color/holo_orange_dark"
-        android:textColor="?android:attr/textColorHint"
-        tools:textColor="?android:attr/textColorHint"
-        android:background="@android:color/holo_blue_dark"
-        tools:textAppearance="@style/TextAppearance.AppCompat.Notification.Media"
         android:height="70dp"
         android:width="120dp"
         android:textStyle="normal|bold" />
@@ -114,5 +90,27 @@
         android:layout_marginBottom="78dp"
         android:id="@+id/textView4"
         android:clickable="true" />
+
+    <Button
+        android:text="Someone needs\nhelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:id="@+id/someone_need"
+        android:elevation="0dp"
+        android:textSize="19sp"
+        android:typeface="monospace"
+        android:textColorLink="@android:color/holo_orange_dark"
+        android:textColor="?android:attr/textColorHint"
+        tools:textColor="?android:attr/textColorHint"
+        android:background="@android:color/holo_blue_dark"
+        tools:textAppearance="@style/TextAppearance.AppCompat.Notification.Media"
+        android:height="70dp"
+        android:width="120dp"
+        android:textStyle="normal|bold"
+        android:layout_alignTop="@+id/needHelp"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
 
 </RelativeLayout>
